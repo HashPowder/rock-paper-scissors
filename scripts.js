@@ -7,18 +7,18 @@ function getComputerChoice() {
     }
 }
 
-
-
  function playRound(playerSelection, computerSelection) {
+    
     if (playerSelection === hand[0] && computerSelection === hand[1]) {
-        console.log("You Lose! Paper beats Rock")
+        return "You Lose! Paper beats Rock"
     } else if (playerSelection === hand[1] && computerSelection === hand[2]) {
-        console.log("You Lose! Scissors beats Paper")
+        return "You Lose! Scissors beats Paper"
     } else if (playerSelection === hand[2] && computerSelection === hand[0]) {
-        console.log("You Lose! Rock beats Scissors")
+        return "You Lose! Rock beats Scissors"
     } else {
-        console.log("You Win!")
+        return "You Win!"
     }
  }
-
-playRound("rock", "paper")
+const computerSelection = getComputerChoice()
+const playerSelection = prompt()
+console.log( playRound(playerSelection, computerSelection) )
