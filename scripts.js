@@ -22,3 +22,11 @@ function getComputerChoice() {
 const computerSelection = getComputerChoice()
 const playerSelection = prompt()
 console.log( playRound(playerSelection, computerSelection) )
+
+// function game() {
+//     for (let i = 1; i < 6; i++) {
+//        return playRound(i)
+//     }
+// }
+// game()
+
