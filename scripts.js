@@ -1,27 +1,25 @@
 let hand = ["rock", "paper", "scissors"]
+let computerSelection = getComputerChoice()
+let playerSelection = "rock"
 
 function getComputerChoice() {
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 3; i++) {
         let randomIndex = Math.floor(Math.random() * hand.length)
         return hand[randomIndex]
     }
 }
 
  function playRound(playerSelection, computerSelection) {
-    
-    if (playerSelection === hand[0] && computerSelection === hand[1]) {
-        return "You Lose! Paper beats Rock"
-    } else if (playerSelection === hand[1] && computerSelection === hand[2]) {
-        return "You Lose! Scissors beats Paper"
-    } else if (playerSelection === hand[2] && computerSelection === hand[0]) {
-        return "You Lose! Rock beats Scissors"
+    if (playerSelection === computerSelection) {
+        return "Tie!"
     } else {
-        return "You Win!"
+        return "You Lose!"
     }
  }
-const computerSelection = getComputerChoice()
-const playerSelection = prompt()
-console.log( playRound(playerSelection, computerSelection) )
+
+ console.log( playRound() )
+
+
 
 // function game() {
 //     for (let i = 1; i < 6; i++) {
